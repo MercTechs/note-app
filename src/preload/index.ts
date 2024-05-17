@@ -1,5 +1,5 @@
-import { contextBridge } from 'electron'
-import { electronAPI } from '@electron-toolkit/preload'
+import { contextBridge } from "electron";
+import { electronAPI } from "@electron-toolkit/preload";
 
 // Custom APIs for renderer
 // const api = {}
@@ -22,13 +22,13 @@ import { electronAPI } from '@electron-toolkit/preload'
 // }
 
 if (!process.contextIsolated) {
-  throw new Error('contextIsolation must be enabled')
+  throw new Error("contextIsolation must be enabled");
 }
 
 try {
-  contextBridge.exposeInMainWorld('context', {
+  contextBridge.exposeInMainWorld("context", {
     // TODO:
-  })
+  });
 } catch (error) {
-  console.error(error)
+  console.error(error);
 }
